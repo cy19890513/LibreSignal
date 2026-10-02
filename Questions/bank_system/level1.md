@@ -9,8 +9,15 @@ Solving this task consists of several levels. In real test, a subsequent level i
 Your task is to implement a simplified version of a banking system. Plan your design according to the level specifications below:
 
 *   **Level 1:** The banking system should support creating new accounts, depositing money into accounts, and transferring money between two accounts.
+customer.(id, accounts) account.(id, balance, transaction[])
+
 *   **Level 2:** The banking system should support ranking accounts based on outgoing transactions.
+
+
 *   **Level 3:** The banking system should allow scheduling payments with cashback and checking the status of scheduled payments.
+payments = transfer + cashback.
+
+
 *   **Level 4:** The banking system should support merging two accounts while retaining both accounts’ balance and transaction histories.
 
 To move to the next level, you need to pass all the tests at this level.
