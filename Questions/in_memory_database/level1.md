@@ -7,8 +7,13 @@ Requirements
 Your task is to implement a simplified version of an in-memory database. Plan your design according to the level specifications below:
 
 * **Level 1**: In-memory database should support basic operations to manipulate records, fields, and values within fields.
+memoryDatabase (records, fields) record (fields, TTL)fields(values)
+
 * **Level 2**: In-memory database should support displaying a specific record's fields based on a filter.
+
+
 * **Level 3**: In-memory database should support TTL (Time-To-Live) configurations on database records.
+
 * **Level 4**: In-memory database should support backup and restore functionality.
 
 To move to the next level, you need to pass all the tests at this level.

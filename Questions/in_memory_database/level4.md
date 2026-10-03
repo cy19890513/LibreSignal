@@ -4,6 +4,8 @@ Level 4
 The database should be backed up from time to time. Introduce operations to support backing up and restoring the database state based on timestamps. When restoring, ttl expiration times should be recalculated accordingly.
 
 * `backup(timestamp)` — should save the database state at the specified timestamp, including the remaining lifespan for all records and fields. Remaining lifespan is the duration between the timestamp of this operation and their expiry timestamp. Returns a string representing the number of non-empty non-expired records (the number of keys) in the database.
+Backup (timestamp, records)
+
 * `restore(timestamp, timestampToRestore)` — should restore the database from the latest backup before timestampToRestore. It's guaranteed that a backup before timestampToRestore will exist. Expiration times for restored records and fields should be recalculated according to the timestamp of this operation - since the database timeline always flows forward, restored records and fields should expire after the timestamp of this operation, depending on their remaining lifespan in the backup. This operation should return an empty string.
 
 ### Examples
