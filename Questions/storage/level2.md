@@ -1,7 +1,8 @@
 # Level 2
 
 Implement an operation for retrieving some statistics about files with a specific prefix.
-
+<!-- System: {name: File} File: size -->
+<!-- sorting logic -->
 - `GET_N_LARGEST <prefix> <n>` — should return the string representing the names of the top `n` largest files with names starting with `prefix` in the following format:
   `"<name1>(<size1>), ..., <nameN>(<sizeN>)"`.
   Returned files should be sorted by size in descending order, or in case of a tie, sorted in [lexicographical](https://en.wikipedia.org/wiki/Lexicographical_order) order of the names.

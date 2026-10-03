@@ -1,7 +1,11 @@
 # Level 3
 
 Implement support for queries from different users. All users share a common filesystem in the cloud storage system, but each user is assigned a storage capacity limit.
-
+<!-- System: {fName: (size, userId )} File: size -->
+<!-- Users: {id: Capa} -->
+<!-- change to ADD_File from lvl 1 -->
+<!-- Merge loop Users. remove user 1 and update user2.  -->
+<!-- loop agin update userId -->
 - `ADD_USER <userId> <capacity>` — should add a new user in the system, with `capacity` as their storage limit in bytes. The total size of all files owned by `userId` cannot exceed `capacity`. The operation fails if a user with `userId` already exists. Returns `"true"` if a user was successfully created, or `"false"` otherwise.
 
 - `ADD_FILE_BY <userId> <name> <size>` — should behave in the same way as the `ADD_FILE` from Level 1, but the added file should be owned by the user with `userId`. A new file cannot be added to the storage if doing so would exceed the user's `capacity` limit. Returns a string representing the remaining capacity of the user if the file is added successfully, or an empty string otherwise.

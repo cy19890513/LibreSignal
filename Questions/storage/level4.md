@@ -1,7 +1,13 @@
 # Level 4
 
 Implement support to allow users to back up their files.
-
+<!-- System: {fName: (size, userId )} File: size -->
+<!-- Users: {id: Capa} -->
+<!-- Backups: {userId: {fName: (size, _userId)}} -->
+<!-- update merge function. backups are deleted for u2 -->
+<!-- restore function,  -->
+<!-- all current files deleted. for case same file name ignore -->
+<!-- return restored count in string . -->
 - `BACKUP_USER <userId>` — should back up the current state of all files owned by `userId` (i.e., file names and sizes).
   The backup is stored on a separate storage system and is not affected by any new file manipulation queries.
   Overwrites any backups for the same user if previous backups exist.

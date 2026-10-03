@@ -1,6 +1,7 @@
 # Level 1
 
 The cloud storage system should support file manipulation.
+<!-- System: {name: File} File: size -->
 
 - `ADD_FILE <name> <size>` — should add a new file `name` to the storage. `size` is the amount of memory required in bytes. The current operation fails if a file with the same `name` already exists. Returns `"true"` if the file was added successfully or `"false"` otherwise.
 
